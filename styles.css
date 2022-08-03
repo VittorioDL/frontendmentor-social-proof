@@ -144,7 +144,7 @@ html{
         margin-bottom: 5rem;
     }
 }
-@media (max-width: 1500px) {
+@media (max-width: 1440px) {
     .social-proof{
         display: flex;
         flex-direction: column;
