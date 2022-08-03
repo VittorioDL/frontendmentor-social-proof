@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+:root{
+    --clr-heading: hsl(300, 43%, 22%);
+    --clr-accent: hsl(333, 80%, 67%);
+
+    --clr-main-paragraph: hsl(303, 10%, 53%);
+    --clr-card-paragraph: hsl(300, 24%, 96%);
+    --clr-white: hsl(0, 0%, 100%);
+
+    --font-size: 15px;
+    --font-family: 'League Spartan', sans-serif; /*400, 500, 700*/
+}
+
+html{
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+}
+
+/* -----MAIN SECTION----- */
+.main-section{
+    min-width: 100%;
+    margin: 0;
+    padding-inline: 12rem;
+    padding-top: 9rem;
+   
+    display: flex;
+    flex-direction: row;
+}
+.main-section-text{
+    width: 34%;
+}
+.main-section-text-title{
+    color: var(--clr-heading);
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 3.5rem;
+    margin-bottom: 2rem;
+}
+.main-section-text-p{
+    color: var(--clr-main-paragraph);
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    font-weight: 500;
+}
+
+
+/* -----REVIEWS----- */
+.main-section-reviews{
+    padding-top: 2rem;
+    width: 66%;
+}
+.review{
+    float: right;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--clr-card-paragraph);
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    width: 32rem;
+    padding: 0.4rem;
+}
+.review ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin-right: 1.8rem;
+    margin-left: -0.8rem;
+}
+.review ul li{
+    margin-right: 0.5rem;
+}
+.review ul li img{
+    width: 100%;
+}
+.review-text{
+    text-align: left;
+    display: flex;
+    align-items: center;
+    color: var(--clr-heading);
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+
+/* -----SOCIAL PROOF CARDS----- */
+.social-proof{
+    display: flex;
+    flex-direction: row;
+    min-width: 100%;
+    padding-inline: 12rem;
+    gap: 2rem;
+    padding-right: 13rem;
+}
+.social-proof-card{
+    background-color: var(--clr-heading);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    padding: 3rem;
+    height: fit-content;
+}
+.social-proof-heading{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2rem;
+}
+.social-proof-heading-title{
+    display: flex;
+    flex-direction: column;
+}
+.social-proof-review{
+    color: var(--clr-card-paragraph);
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 300;
+}
+.author{
+    color: var(--clr-white);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.verified{
+    color: var(--clr-accent);
+    font-size: 1.5rem;
+}
+.social-proof-heading img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin: auto 1.7rem auto 0;
+}
+
+/* ----- MEDIA QUERIES ----- */
+@media (min-width: 1260px) {
+    .pd-0{margin-right: 7rem;}
+    .pd-1{margin-right: 4rem;}
+    .pd-2{margin-right: 1rem;}
+
+    .off-0{margin-top: 1rem;}
+    .off-1{margin-top: 3rem;}
+    .off-2{margin-top: 5rem;}
+
+    .main-section{
+        margin-bottom: 5rem;
+    }
+}
+@media (max-width: 1500px) {
+    .social-proof{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-inline: 5rem;
+        width: 100%;
+        margin-right: 0;
+    }
+    .social-proof-card{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        max-width: 35rem;
+        width: 90%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .main-section{
+        flex-direction: column;
+        text-align: center;
+        padding: 5rem;
+        margin-bottom: 0;
+    }
+    .main-section-text,
+    .main-section-reviews{
+        width: 100%;
+        margin-right: 0;
+    }
+    .main-section-reviews{
+        margin: auto;
+        padding: auto;
+        display: flex;
+        justify-content: center;
+    }
+    .main-section-reviews{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .review{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        max-width: 27rem;
+        width: 90%;
+    }
+    .review-text{
+        text-align: center;
+    }
+}
+@media (max-width: 500px){
+    .main-section,
+    .social-proof{
+        padding: 3rem 1rem;
+    }
+}
